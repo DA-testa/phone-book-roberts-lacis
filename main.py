@@ -20,8 +20,7 @@ def process_queries(queries):
     contacts = {}
     for cur_query in queries:
         if cur_query.type == 'add':
-            if contacts.get(cur_query.number) is not None:
-                contacts[cur_query.number] = cur_query.name
+            contacts[cur_query.number] = cur_query.name
         elif cur_query.type == 'del':
             if contacts.get(cur_query.number) is not None:
                 contacts.pop(cur_query.number)
